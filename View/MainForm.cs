@@ -154,21 +154,21 @@ namespace MongoDB
             this.minPriceTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.maxPriceTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.maxPriceTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.addHouseButton = new System.Windows.Forms.Button();
             this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.pageIndexLabel = new System.Windows.Forms.Label();
-            this.previousPageButton = new System.Windows.Forms.Button();
             this.nextPageButton = new System.Windows.Forms.Button();
+            this.previousPageButton = new System.Windows.Forms.Button();
+            this.pageIndexLabel = new System.Windows.Forms.Label();
             this.searchGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -176,8 +176,8 @@ namespace MongoDB
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchGroupBox
@@ -213,7 +213,7 @@ namespace MongoDB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.minPriceTextBox.Location = new System.Drawing.Point(66, 19);
             this.minPriceTextBox.Name = "minPriceTextBox";
-            this.minPriceTextBox.Size = new System.Drawing.Size(99, 20);
+            this.minPriceTextBox.Size = new System.Drawing.Size(99, 22);
             this.minPriceTextBox.TabIndex = 7;
             // 
             // label2
@@ -221,7 +221,7 @@ namespace MongoDB
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(201, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 15);
+            this.label2.Size = new System.Drawing.Size(20, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "et";
             // 
@@ -230,9 +230,18 @@ namespace MongoDB
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 15);
+            this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Entre";
+            // 
+            // maxPriceTextBox
+            // 
+            this.maxPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maxPriceTextBox.Location = new System.Drawing.Point(253, 19);
+            this.maxPriceTextBox.Name = "maxPriceTextBox";
+            this.maxPriceTextBox.Size = new System.Drawing.Size(99, 22);
+            this.maxPriceTextBox.TabIndex = 4;
             // 
             // searchButton
             // 
@@ -252,7 +261,7 @@ namespace MongoDB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextBox.Location = new System.Drawing.Point(6, 20);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(368, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(368, 22);
             this.searchTextBox.TabIndex = 0;
             // 
             // flowLayoutPanel
@@ -290,15 +299,6 @@ namespace MongoDB
             this.splitContainer1.SplitterDistance = 386;
             this.splitContainer1.TabIndex = 2;
             // 
-            // maxPriceTextBox
-            // 
-            this.maxPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.maxPriceTextBox.Location = new System.Drawing.Point(253, 19);
-            this.maxPriceTextBox.Name = "maxPriceTextBox";
-            this.maxPriceTextBox.Size = new System.Drawing.Size(99, 20);
-            this.maxPriceTextBox.TabIndex = 4;
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -313,46 +313,6 @@ namespace MongoDB
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ajouter une location";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox3.Controls.Add(this.priceTextBox);
-            this.groupBox3.Location = new System.Drawing.Point(6, 198);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(136, 48);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Prix";
-            // 
-            // priceTextBox
-            // 
-            this.priceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.priceTextBox.Location = new System.Drawing.Point(6, 22);
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(124, 20);
-            this.priceTextBox.TabIndex = 7;
-            // 
-            // addHouseButton
-            // 
-            this.addHouseButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.addHouseButton.Location = new System.Drawing.Point(148, 212);
-            this.addHouseButton.Name = "addHouseButton";
-            this.addHouseButton.Size = new System.Drawing.Size(226, 33);
-            this.addHouseButton.TabIndex = 1;
-            this.addHouseButton.Text = "Ajouter";
-            this.addHouseButton.UseVisualStyleBackColor = true;
-            // 
-            // titleTextBox
-            // 
-            this.titleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.titleTextBox.Location = new System.Drawing.Point(6, 20);
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(368, 20);
-            this.titleTextBox.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -375,18 +335,60 @@ namespace MongoDB
             this.descriptionTextBox.Size = new System.Drawing.Size(356, 117);
             this.descriptionTextBox.TabIndex = 4;
             // 
-            // pageIndexLabel
+            // groupBox3
             // 
-            this.pageIndexLabel.AutoSize = true;
-            this.pageIndexLabel.Location = new System.Drawing.Point(317, 429);
-            this.pageIndexLabel.Name = "pageIndexLabel";
-            this.pageIndexLabel.Size = new System.Drawing.Size(35, 15);
-            this.pageIndexLabel.TabIndex = 2;
-            this.pageIndexLabel.Text = "page";
-            this.pageIndexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.Controls.Add(this.priceTextBox);
+            this.groupBox3.Location = new System.Drawing.Point(6, 198);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(136, 48);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Prix";
+            // 
+            // priceTextBox
+            // 
+            this.priceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceTextBox.Location = new System.Drawing.Point(6, 22);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(124, 22);
+            this.priceTextBox.TabIndex = 7;
+            // 
+            // addHouseButton
+            // 
+            this.addHouseButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addHouseButton.Location = new System.Drawing.Point(148, 212);
+            this.addHouseButton.Name = "addHouseButton";
+            this.addHouseButton.Size = new System.Drawing.Size(226, 33);
+            this.addHouseButton.TabIndex = 1;
+            this.addHouseButton.Text = "Ajouter";
+            this.addHouseButton.UseVisualStyleBackColor = true;
+            // 
+            // titleTextBox
+            // 
+            this.titleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.titleTextBox.Location = new System.Drawing.Point(6, 20);
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.Size = new System.Drawing.Size(368, 22);
+            this.titleTextBox.TabIndex = 0;
+            // 
+            // nextPageButton
+            // 
+            this.nextPageButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.nextPageButton.Location = new System.Drawing.Point(358, 424);
+            this.nextPageButton.Name = "nextPageButton";
+            this.nextPageButton.Size = new System.Drawing.Size(52, 23);
+            this.nextPageButton.TabIndex = 4;
+            this.nextPageButton.Text = ">";
+            this.nextPageButton.UseVisualStyleBackColor = true;
+            this.nextPageButton.Click += new System.EventHandler(this.nextPageButton_Click);
             // 
             // previousPageButton
             // 
+            this.previousPageButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.previousPageButton.Enabled = false;
             this.previousPageButton.Location = new System.Drawing.Point(259, 424);
             this.previousPageButton.Name = "previousPageButton";
@@ -396,15 +398,16 @@ namespace MongoDB
             this.previousPageButton.UseVisualStyleBackColor = true;
             this.previousPageButton.Click += new System.EventHandler(this.previousPageButton_Click);
             // 
-            // nextPageButton
+            // pageIndexLabel
             // 
-            this.nextPageButton.Location = new System.Drawing.Point(358, 424);
-            this.nextPageButton.Name = "nextPageButton";
-            this.nextPageButton.Size = new System.Drawing.Size(52, 23);
-            this.nextPageButton.TabIndex = 4;
-            this.nextPageButton.Text = ">";
-            this.nextPageButton.UseVisualStyleBackColor = true;
-            this.nextPageButton.Click += new System.EventHandler(this.nextPageButton_Click);
+            this.pageIndexLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pageIndexLabel.AutoSize = true;
+            this.pageIndexLabel.Location = new System.Drawing.Point(317, 429);
+            this.pageIndexLabel.Name = "pageIndexLabel";
+            this.pageIndexLabel.Size = new System.Drawing.Size(40, 17);
+            this.pageIndexLabel.TabIndex = 2;
+            this.pageIndexLabel.Text = "page";
+            this.pageIndexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
@@ -423,10 +426,10 @@ namespace MongoDB
             this.splitContainer1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
