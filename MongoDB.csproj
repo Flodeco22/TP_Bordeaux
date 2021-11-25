@@ -118,6 +118,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\HouseDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\HouseDetails.Designer.cs">
+      <DependentUpon>HouseDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HouseItemForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Model\HouseModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\HouseDetails.resx">
+      <DependentUpon>HouseDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HouseItemForm.resx">
       <DependentUpon>HouseItemForm.cs</DependentUpon>
     </EmbeddedResource>
