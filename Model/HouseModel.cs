@@ -15,5 +15,6 @@ namespace MongoDB.Model
         public String HostName { get; set; }
         public String HostPictureUrl { get; set; }
         public String HostLocation { get; set; }
+        public String HostDispo { get; set; }
     }
 }
