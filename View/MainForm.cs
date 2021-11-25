@@ -99,9 +99,6 @@ namespace MongoDB
             }
         }
 
-<<<<<<< HEAD
-        public void refreshItemsLayout() // Ajoute les maisons dans le "flowLayoutPanel"
-=======
         void showHouseDetails(HouseModel house)
         {
             HouseDetails houseDetails = new HouseDetails();
@@ -117,9 +114,7 @@ namespace MongoDB
             flowLayoutPanel.Show();
             detailsFlowLayoutPanel.Hide();
         }
-
-        void refreshItemsLayout() // Ajoute les maisons dans le "flowLayoutPanel"
->>>>>>> 1d1bd2b9523bb35adf0eeb8c0ce4244accb767c4
+        public void refreshItemsLayout() // Ajoute les maisons dans le "flowLayoutPanel"
         {
             flowLayoutPanel.Controls.Clear(); // On vide le layout histoire de pas avoir 150 000 maisons sur une page
             foreach (var item in houseList) // Dois-je l'expliquer ?
