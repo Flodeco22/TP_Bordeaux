@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace MongoDB.View
 {
     partial class HouseItemForm
@@ -33,6 +36,7 @@ namespace MongoDB.View
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.priceLabel = new System.Windows.Forms.Label();
             this.dispoLabel = new System.Windows.Forms.Label();
+            this.supprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,18 +90,29 @@ namespace MongoDB.View
             this.dispoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.dispoLabel.Click += new System.EventHandler(this.label1_Click);
             // 
+            // supprimer
+            // 
+            this.supprimer.Location = new System.Drawing.Point(84, 297);
+            this.supprimer.Name = "supprimer";
+            this.supprimer.Size = new System.Drawing.Size(118, 37);
+            this.supprimer.TabIndex = 4;
+            this.supprimer.Text = "Supprimer";
+            this.supprimer.UseVisualStyleBackColor = true;
+            this.supprimer.Click += new System.EventHandler(this.supprimer_Click);
+            // 
             // HouseItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.supprimer);
             this.Controls.Add(this.dispoLabel);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.titleLabel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "HouseItemForm";
-            this.Size = new System.Drawing.Size(300, 308);
+            this.Size = new System.Drawing.Size(300, 346);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -109,5 +124,6 @@ namespace MongoDB.View
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label dispoLabel;
+        private System.Windows.Forms.Button supprimer;
     }
 }

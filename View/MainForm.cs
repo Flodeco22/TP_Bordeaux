@@ -47,6 +47,21 @@ namespace MongoDB
             Console.WriteLine("Max Page : " + maxPage);
         }
 
+        public void getDataFromDB() //Get all data (no filter)
+        {
+            houseList = new List<HouseModel>();
+            var database = dbClient.GetDatabase("tp");
+            var collection = database.GetCollection<BsonDocument>("bordeaux");
+            var documents = collection.Find(new BsonDocument()).Skip(currentPageIndex * nbItemByPage).Limit(nbItemByPage).ToList();
+            addItemsToHouseList(documents);
+            int docCount = (int)collection.CountDocuments(new BsonDocument());
+
+            int remainder;
+            int quotient = Math.DivRem(docCount, nbItemByPage, out remainder);
+            maxPage = remainder == 0 ? quotient : quotient + 1;
+            Console.WriteLine("Max Page : " + maxPage);
+        }
+
         void getDataFromDB(float minPrice, float maxPrice, string textToSearch) // TODO : Get filtered data
         { 
 
@@ -71,6 +86,7 @@ namespace MongoDB
             {
                 houseList.Add(new HouseModel
                 {
+                    Id = item.GetValue("id").AsString,
                     Name = item.GetValue("name").AsString,
                     Description = item.GetValue("description").AsString,
                     Price = double.Parse(item.GetValue("price").AsString.Trim('$').Replace('.', ',')),
@@ -83,15 +99,22 @@ namespace MongoDB
             }
         }
 
-        void refreshItemsLayout() // Ajoute les maisons dans le "flowLayoutPanel"
+        public void refreshItemsLayout() // Ajoute les maisons dans le "flowLayoutPanel"
         {
             flowLayoutPanel.Controls.Clear(); // On vide le layout histoire de pas avoir 150 000 maisons sur une page
             foreach (var item in houseList) // Dois-je l'expliquer ?
             {
-                HouseItemForm houseItemForm = new HouseItemForm(); // Un nouveau petit Form qui va contenir les infos basiques d'une maison
+                HouseItemForm houseItemForm = new HouseItemForm(item.Id, dbClient, this); // Un nouveau petit Form qui va contenir les infos basiques d'une maison
                 houseItemForm.showData(item.Name, item.PictureUrl, item.Price.ToString(), item.HostDispo); // On donne les infos à la Form pour qu'elle puisse les afficher
                 flowLayoutPanel.Controls.Add(houseItemForm); // Et hop, on l'ajoute dans notre beau Panel plein de FLOWWW
             }
+        }
+
+        private void removeItem()
+        {
+            
+            
+            getDataFromDB(currentPageIndex);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -143,7 +166,7 @@ namespace MongoDB
                 nextPageButton.Enabled = true;
         }
 
-        void refreshPageLabel()
+        public void refreshPageLabel()
         {
             pageIndexLabel.Text = (currentPageIndex + 1).ToString() + "/" + maxPage;
         }
