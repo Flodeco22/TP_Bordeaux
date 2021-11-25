@@ -77,8 +77,9 @@ namespace MongoDB
                     PictureUrl = item.GetValue("picture_url").AsString,
                     HostName = item.GetValue("host_name").AsString,
                     HostPictureUrl = item.GetValue("host_picture_url").AsString,
-                    HostLocation = item.GetValue("host_location").AsString
-                });
+                    HostLocation = item.GetValue("host_location").AsString,
+                    HostDispo = (item.GetValue("has_availability").AsString == "t" ? "Disponible" : "Indisponible" )
+                });;
             }
         }
 
@@ -104,7 +105,7 @@ namespace MongoDB
             foreach (var item in houseList) // Dois-je l'expliquer ?
             {
                 HouseItemForm houseItemForm = new HouseItemForm(); // Un nouveau petit Form qui va contenir les infos basiques d'une maison
-                houseItemForm.showData(item.Name, item.PictureUrl, item.Price.ToString()); // On donne les infos à la Form pour qu'elle puisse les afficher
+                houseItemForm.showData(item.Name, item.PictureUrl, item.Price.ToString(), item.HostDispo); // On donne les infos à la Form pour qu'elle puisse les afficher
                 flowLayoutPanel.Controls.Add(houseItemForm); // Et hop, on l'ajoute dans notre beau Panel plein de FLOWWW
             }
         }

@@ -18,11 +18,17 @@ namespace MongoDB.View
             //showData(title, imageUrl, price);
         }
 
-        internal void showData(string title, string imageUrl, string price)
+        internal void showData(string title, string imageUrl, string price, string dispo)
         {
             titleLabel.Text = title;
             pictureBox.ImageLocation = imageUrl;
             priceLabel.Text = price + "€";
+            dispoLabel.Text = dispo;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
