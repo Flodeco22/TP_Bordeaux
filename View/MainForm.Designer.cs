@@ -41,6 +41,7 @@ namespace MongoDB
         private System.Windows.Forms.Button nextPageButton;
         private System.Windows.Forms.Button previousPageButton;
         private System.Windows.Forms.Label pageIndexLabel;
+        private System.Windows.Forms.FlowLayoutPanel detailsFlowLayoutPanel;
     }
 }
 
